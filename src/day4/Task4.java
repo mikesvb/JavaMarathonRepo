@@ -14,7 +14,7 @@ public class Task4 {
         for(int i=0; i<100; i++){
            int tempSumm;
             if(i>0 && i<99){//так как у 0 нет предыдущего, а у 99 нет последующего
-                tempSumm=arrayRandom[i-1] + arrayRandom[i-1] + arrayRandom[i+1];
+                tempSumm=arrayRandom[i-1] + arrayRandom[i] + arrayRandom[i+1];
                 if(tempSumm>maxSumm){
                     maxSumm=tempSumm;
                     index = i-1;
