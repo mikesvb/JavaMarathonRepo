@@ -21,7 +21,7 @@ public class Plane {
     }
 
     public void  fillUp(int fuel){
-        setFuel(fuel);
+        setFuel(getFuel()+fuel);
     }
 
     public void setFuel(int fuel) {
