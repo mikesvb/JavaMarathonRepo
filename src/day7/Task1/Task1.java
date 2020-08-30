@@ -4,7 +4,7 @@ public class Task1 {
     public static void main(String[] args) {
         Plane plane1 = new Plane("Made in USSR", 1980, 20, 5);
         plane1.setYear(1977);
-        plane1.setLength(33);
+        plane1.setLength(200);
         plane1.fillUp(800);
 
         Plane plane2 = new Plane("Made in USA", 2015, 200, 10);

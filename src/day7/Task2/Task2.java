@@ -31,11 +31,20 @@ public class Task2 {
             }else{
                 System.out.print(players[4].getStamina() + " ");
             }
-
         }
+
         System.out.println("------------------------ \nКоличество игроков в текущий момент: " + Player.countPlayers);
 
         Player.info();
+
+        System.out.println("Вызов игрока 4");
+        players[4].run();
+        System.out.println(players[4].getStamina());
+
+        Player.info();
+
+        System.out.println("------------------------ \nКоличество игроков в текущий момент: " + Player.countPlayers);
+
 
     }
 

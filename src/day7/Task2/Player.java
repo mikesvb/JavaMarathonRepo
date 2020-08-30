@@ -3,8 +3,8 @@ package day7.Task2;
 public class Player {
     private String name;//выносливость
     private int stamina;//выносливость
-    final static int MAX_STAMINA = 100;
-    final static int MIN_STAMINA = 0;
+    public final static int MAX_STAMINA = 100;
+    public final static int MIN_STAMINA = 0;
 
     static int countPlayers = 0;
 
@@ -22,7 +22,11 @@ public class Player {
     }
 
     public int getStamina() {
-        return stamina;
+        return this.stamina;
+    }
+
+    public void setStamina(int stamina) {
+        this.stamina = stamina;
     }
 
     public String getName() {
@@ -30,9 +34,13 @@ public class Player {
     }
 
     public void run(){
-        this.stamina--;
-        if(this.stamina==0){
-            countPlayers--;
+        if(getStamina()>0) {//если игрока вызвали с нулём
+            this.setStamina(--stamina);
+            if (getStamina() == 0) {
+                countPlayers--;
+            }
+        }else{
+            System.out.println("Игрок "+ getName() +" больше бегать не может. Устал, отдыхает");
         }
     }
 
