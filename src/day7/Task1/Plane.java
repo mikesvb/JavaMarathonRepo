@@ -59,9 +59,6 @@ public class Plane {
 
     public static void comparePlane(Plane plane1, Plane plane2){
 
-        int planeLength1=plane1.getLength();
-        int planeLength2=plane2.getLength();
-
         if (plane1.getLength()>plane2.getLength()){
             System.out.println("У самолёта " + plane1.getManufacturer() + " длина больше чем у " + plane2.getManufacturer());
         }else if (plane1.getLength()<plane2.getLength()){
