@@ -34,12 +34,12 @@ public class Player {
     }
 
     public void run(){
-        if(getStamina()>0) {//если игрока вызвали с нулём
+        if(getStamina()>0) {
             this.setStamina(--stamina);
             if (getStamina() == 0) {
                 countPlayers--;
             }
-        }else{
+        }else{//если игрока вызвали с нулём
             System.out.println("Игрок "+ getName() +" больше бегать не может. Устал, отдыхает");
         }
     }
