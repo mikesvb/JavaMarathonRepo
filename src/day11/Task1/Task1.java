@@ -10,7 +10,7 @@ public class Task1 {
         Courier courier = new Courier(warehouse);
 
         System.out.println("Работа началась...");
-        for (int i = 0; i < 3000; i++) {
+        for (int i = 0; i < 8000; i++) {
             picker.doWork();
             courier.doWork();
             warehouse.toString();
