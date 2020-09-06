@@ -1,13 +1,15 @@
 package day13;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class User {
     private String username;
-    private List<User> subscriptions = null;
+    private List<User> subscriptions;
 
     public User(String username) {
         this.username = username;
+        this.subscriptions = new ArrayList<>();
     }
 
     public String getUsername() {
@@ -27,13 +29,13 @@ public class User {
     }
 
     public boolean isSubscribed(User user){
-        boolean returnSub=false;
+
         for (User userSub:subscriptions){
             if(userSub.getUsername().equals(user.getUsername())){
-                returnSub=true;
+                return true;
             }
         }
-        return returnSub;
+        return false;
     }
 
 	public boolean isFriend(User user1, User user2){
