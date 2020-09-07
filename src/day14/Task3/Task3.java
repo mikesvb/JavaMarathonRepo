@@ -31,8 +31,6 @@ public class Task3 {
                 String name = stringSplit[0];
                 int years = Integer.parseInt(stringSplit[1]);
 
-                Person person = new Person(name, years);
-                list.add(person);
                 if(years<0) {
                     try {
                         throw new IOException();
@@ -40,6 +38,12 @@ public class Task3 {
                         System.out.println("Некорректный входной файл");
                     }
                 }
+                else{
+                    Person person = new Person(name, years);
+                    list.add(person);
+                }
+
+
             }
 
         } catch (FileNotFoundException e) {
